@@ -1,0 +1,80 @@
+name: Regression Suite
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  test:
+    name: Run on ${{ matrix.browser }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chrome, firefox, edge]
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+
+      - name: Run regression suite (headless)
+        run: >
+          mvn -B test
+          -Dbrowser=${{ matrix.browser }}
+          -Dheadless=true
+          -DsuiteFile=src/test/resources/suites/regression.xml
+        continue-on-error: true
+
+      - name: Upload Allure results (${{ matrix.browser }})
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results-${{ matrix.browser }}
+          path: target/allure-results
+          retention-days: 15
+
+  publish-report:
+    name: Build & publish Allure report
+    needs: test
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Download all Allure result artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: downloaded-results
+
+      - name: Merge results from all browsers into one folder
+        run: |
+          mkdir -p allure-results
+          find downloaded-results -mindepth 2 -maxdepth 2 -type f -exec cp {} allure-results \;
+
+      - name: Generate Allure report
+        uses: simple-elf/allure-report-action@master
+        with:
+          allure_results: allure-results
+          allure_history: allure-history
+          keep_reports: 20
+
+      - name: Publish to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history

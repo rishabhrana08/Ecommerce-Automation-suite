@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="EcommerceCrossBrowserSuite" parallel="tests" thread-count="3">
+
+    <listeners>
+        <listener class-name="com.rishabh.framework.listeners.TestListener"/>
+        <listener class-name="com.rishabh.framework.listeners.RetryListener"/>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <!-- runs the smoke-tagged subset on all three browsers in parallel, one <test> per browser -->
+    <test name="Chrome">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="viewportWidth" value="1920"/>
+        <parameter name="viewportHeight" value="1080"/>
+        <groups>
+            <run><include name="smoke"/></run>
+        </groups>
+        <classes>
+            <class name="com.rishabh.tests.regression.RegistrationTests"/>
+            <class name="com.rishabh.tests.regression.LoginLogoutTests"/>
+            <class name="com.rishabh.tests.regression.HomeNavigationTests"/>
+            <class name="com.rishabh.tests.regression.ProductSearchTests"/>
+            <class name="com.rishabh.tests.regression.ProductListingFilterTests"/>
+            <class name="com.rishabh.tests.regression.ProductDetailTests"/>
+            <class name="com.rishabh.tests.regression.CartTests"/>
+            <class name="com.rishabh.tests.regression.CheckoutOrderTests"/>
+            <class name="com.rishabh.tests.regression.ContactUsTests"/>
+        </classes>
+    </test>
+
+    <test name="Firefox">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="viewportWidth" value="1920"/>
+        <parameter name="viewportHeight" value="1080"/>
+        <groups>
+            <run><include name="smoke"/></run>
+        </groups>
+        <classes>
+            <class name="com.rishabh.tests.regression.RegistrationTests"/>
+            <class name="com.rishabh.tests.regression.LoginLogoutTests"/>
+            <class name="com.rishabh.tests.regression.HomeNavigationTests"/>
+            <class name="com.rishabh.tests.regression.ProductSearchTests"/>
+            <class name="com.rishabh.tests.regression.ProductListingFilterTests"/>
+            <class name="com.rishabh.tests.regression.ProductDetailTests"/>
+            <class name="com.rishabh.tests.regression.CartTests"/>
+            <class name="com.rishabh.tests.regression.CheckoutOrderTests"/>
+            <class name="com.rishabh.tests.regression.ContactUsTests"/>
+        </classes>
+    </test>
+
+    <test name="Edge">
+        <parameter name="browser" value="edge"/>
+        <parameter name="viewportWidth" value="1920"/>
+        <parameter name="viewportHeight" value="1080"/>
+        <groups>
+            <run><include name="smoke"/></run>
+        </groups>
+        <classes>
+            <class name="com.rishabh.tests.regression.RegistrationTests"/>
+            <class name="com.rishabh.tests.regression.LoginLogoutTests"/>
+            <class name="com.rishabh.tests.regression.HomeNavigationTests"/>
+            <class name="com.rishabh.tests.regression.ProductSearchTests"/>
+            <class name="com.rishabh.tests.regression.ProductListingFilterTests"/>
+            <class name="com.rishabh.tests.regression.ProductDetailTests"/>
+            <class name="com.rishabh.tests.regression.CartTests"/>
+            <class name="com.rishabh.tests.regression.CheckoutOrderTests"/>
+            <class name="com.rishabh.tests.regression.ContactUsTests"/>
+        </classes>
+    </test>
+
+</suite>

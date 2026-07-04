@@ -1,0 +1,11 @@
+target/
+*.class
+.allure/
+.idea/
+*.iml
+.vscode/
+allure-results/
+allure-report/
+downloaded-results/
+allure-history/
+.DS_Store

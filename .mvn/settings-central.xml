@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0">
+  <!--
+    This project has nothing to do with any corporate artifact repo, but a global
+    ~/.m2/settings.xml mirror (e.g. a company Artifactory) can still force every
+    build in every project through it - and break this one if that mirror isn't
+    reachable from wherever you're building. This file overrides that, just for
+    this project, to resolve straight from Maven Central.
+  -->
+  <mirrors>
+    <mirror>
+      <id>central-direct</id>
+      <mirrorOf>*</mirrorOf>
+      <url>https://repo1.maven.org/maven2</url>
+    </mirror>
+  </mirrors>
+</settings>
