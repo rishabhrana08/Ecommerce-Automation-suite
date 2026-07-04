@@ -1,0 +1,8 @@
+05:15:19.244 [TestNG-test-RegressionModules-1] INFO  com.rishabh.framework.listeners.TestListener - >>> Starting: registerUser_withExistingEmail_showsAlreadyExistError
+05:16:17.709 [TestNG-test-RegressionModules-1] ERROR com.rishabh.framework.listeners.TestListener - <<< FAILED: registerUser_withExistingEmail_showsAlreadyExistError - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: a[href='/logout'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.17.0-1018-azure', java.version: '17.0.19'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 152.0.3, moz:accessibilityChecks: false, moz:buildID: 20260624221428, moz:geckodriverVersion: 0.37.0, moz:headless: true, moz:platformVersion: 6.17.0-1018-azure, moz:processID: 44159, moz:profile: /tmp/rust_mozprofilem0KCqi, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (X11; Linux x86...}
+Session ID: 63e82a7a-0b8d-4980-a87b-d52f0481e780
+05:16:17.814 [TestNG-test-RegressionModules-1] INFO  com.rishabh.framework.listeners.TestListener - Screenshot saved to /home/runner/work/Ecommerce-Automation-suite/Ecommerce-Automation-suite/target/screenshots/registerUser_withExistingEmail_showsAlreadyExistError.png

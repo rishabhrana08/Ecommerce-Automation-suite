@@ -1,0 +1,3 @@
+05:21:11.511 [TestNG-test-RegressionModules-4] INFO  com.rishabh.framework.listeners.TestListener - >>> Starting: cart_quantityControl_isReadOnlyStepper
+05:21:16.704 [TestNG-test-RegressionModules-4] ERROR com.rishabh.framework.listeners.TestListener - <<< FAILED: cart_quantityControl_isReadOnlyStepper - java.lang.AssertionError: Quantity field is expected to be a disabled display-only stepper on this site expected [true] but found [false]
+05:21:16.761 [TestNG-test-RegressionModules-4] INFO  com.rishabh.framework.listeners.TestListener - Screenshot saved to /home/runner/work/Ecommerce-Automation-suite/Ecommerce-Automation-suite/target/screenshots/cart_quantityControl_isReadOnlyStepper.png

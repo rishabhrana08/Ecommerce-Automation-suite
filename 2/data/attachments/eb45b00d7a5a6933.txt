@@ -1,0 +1,3 @@
+05:14:51.482 [TestNG-test-RegressionModules-1] INFO  com.rishabh.framework.listeners.TestListener - >>> Starting: registerUser_withValidDetails_accountCreatedSuccessfully
+05:15:03.250 [TestNG-test-RegressionModules-1] ERROR com.rishabh.framework.listeners.TestListener - <<< FAILED: registerUser_withValidDetails_accountCreatedSuccessfully - java.lang.AssertionError: User should be auto logged-in post signup expected [true] but found [false]
+05:15:03.399 [TestNG-test-RegressionModules-1] INFO  com.rishabh.framework.listeners.TestListener - Screenshot saved to /home/runner/work/Ecommerce-Automation-suite/Ecommerce-Automation-suite/target/screenshots/registerUser_withValidDetails_accountCreatedSuccessfully.png

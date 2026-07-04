@@ -1,0 +1,3 @@
+05:20:05.769 [TestNG-test-RegressionModules-3] INFO  com.rishabh.framework.listeners.TestListener - >>> Starting: viewProductDetail_fromListing_navigatesCorrectly
+05:20:26.874 [TestNG-test-RegressionModules-3] ERROR com.rishabh.framework.listeners.TestListener - <<< FAILED: viewProductDetail_fromListing_navigatesCorrectly - java.lang.AssertionError: expected [true] but found [false]
+05:20:27.081 [TestNG-test-RegressionModules-3] INFO  com.rishabh.framework.listeners.TestListener - Screenshot saved to /home/runner/work/Ecommerce-Automation-suite/Ecommerce-Automation-suite/target/screenshots/viewProductDetail_fromListing_navigatesCorrectly.png

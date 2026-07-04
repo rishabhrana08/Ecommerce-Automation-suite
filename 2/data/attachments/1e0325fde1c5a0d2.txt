@@ -1,0 +1,8 @@
+05:10:59.218 [TestNG-test-RegressionModules-2] INFO  com.rishabh.framework.listeners.TestListener - >>> Starting: productDetail_addToCart_continueShopping_staysOnProductPage
+05:11:50.622 [TestNG-test-RegressionModules-2] ERROR com.rishabh.framework.listeners.TestListener - <<< FAILED: productDetail_addToCart_continueShopping_staysOnProductPage - org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: .cart (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.17.0-1018-azure', java.version: '17.0.19'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 152.0.3, moz:accessibilityChecks: false, moz:buildID: 20260624221428, moz:geckodriverVersion: 0.37.0, moz:headless: true, moz:platformVersion: 6.17.0-1018-azure, moz:processID: 27530, moz:profile: /tmp/rust_mozprofile1G8TRP, moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (X11; Linux x86...}
+Session ID: 13abf3d2-4d65-41f5-84a2-27b361f183ae
+05:11:50.853 [TestNG-test-RegressionModules-2] INFO  com.rishabh.framework.listeners.TestListener - Screenshot saved to /home/runner/work/Ecommerce-Automation-suite/Ecommerce-Automation-suite/target/screenshots/productDetail_addToCart_continueShopping_staysOnProductPage.png
