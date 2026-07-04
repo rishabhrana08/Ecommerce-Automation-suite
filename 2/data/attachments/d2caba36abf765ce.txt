@@ -1,3 +1,0 @@
-05:18:13.574 [TestNG-test-RegressionModules-3] INFO  com.rishabh.framework.listeners.TestListener - >>> Starting: contactUs_submitWithoutMessage_blocked
-05:18:14.873 [TestNG-test-RegressionModules-3] ERROR com.rishabh.framework.listeners.TestListener - <<< FAILED: contactUs_submitWithoutMessage_blocked - java.lang.AssertionError: expected [false] but found [true]
-05:18:14.964 [TestNG-test-RegressionModules-3] INFO  com.rishabh.framework.listeners.TestListener - Screenshot saved to /home/runner/work/Ecommerce-Automation-suite/Ecommerce-Automation-suite/target/screenshots/contactUs_submitWithoutMessage_blocked.png

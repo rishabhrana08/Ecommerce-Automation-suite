@@ -1,0 +1,3 @@
+08:44:36.696 [TestNG-test-RegressionModules-3] INFO  com.rishabh.framework.listeners.TestListener - >>> Starting: contactUs_afterSuccess_homeButtonReturnsHome
+08:44:55.915 [TestNG-test-RegressionModules-3] ERROR com.rishabh.framework.listeners.TestListener - <<< FAILED: contactUs_afterSuccess_homeButtonReturnsHome - java.lang.AssertionError: expected [true] but found [false]
+08:44:56.064 [TestNG-test-RegressionModules-3] INFO  com.rishabh.framework.listeners.TestListener - Screenshot saved to /home/runner/work/Ecommerce-Automation-suite/Ecommerce-Automation-suite/target/screenshots/contactUs_afterSuccess_homeButtonReturnsHome.png

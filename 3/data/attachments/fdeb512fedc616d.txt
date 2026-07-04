@@ -1,0 +1,3 @@
+08:44:10.897 [TestNG-test-RegressionModules-4] INFO  com.rishabh.framework.listeners.TestListener - >>> Starting: cart_removeOnlyProduct_showsEmptyCartMessage
+08:44:14.060 [TestNG-test-RegressionModules-4] ERROR com.rishabh.framework.listeners.TestListener - <<< FAILED: cart_removeOnlyProduct_showsEmptyCartMessage - java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+08:44:15.356 [TestNG-test-RegressionModules-4] INFO  com.rishabh.framework.listeners.TestListener - Screenshot saved to /home/runner/work/Ecommerce-Automation-suite/Ecommerce-Automation-suite/target/screenshots/cart_removeOnlyProduct_showsEmptyCartMessage.png

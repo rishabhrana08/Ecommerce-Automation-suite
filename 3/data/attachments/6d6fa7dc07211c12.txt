@@ -1,0 +1,3 @@
+08:45:33.956 [TestNG-test-RegressionModules-3] INFO  com.rishabh.framework.listeners.TestListener - >>> Starting: contactUs_submitWithoutName_blocked
+08:45:35.148 [TestNG-test-RegressionModules-3] ERROR com.rishabh.framework.listeners.TestListener - <<< FAILED: contactUs_submitWithoutName_blocked - java.lang.AssertionError: expected [false] but found [true]
+08:45:35.230 [TestNG-test-RegressionModules-3] INFO  com.rishabh.framework.listeners.TestListener - Screenshot saved to /home/runner/work/Ecommerce-Automation-suite/Ecommerce-Automation-suite/target/screenshots/contactUs_submitWithoutName_blocked.png

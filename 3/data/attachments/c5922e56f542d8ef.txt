@@ -1,0 +1,3 @@
+08:45:16.565 [TestNG-test-RegressionModules-2] INFO  com.rishabh.framework.listeners.TestListener - >>> Starting: productDetail_increaseQuantity_reflectsInCart
+08:45:16.581 [TestNG-test-RegressionModules-2] ERROR com.rishabh.framework.listeners.TestListener - <<< FAILED: productDetail_increaseQuantity_reflectsInCart - java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+08:45:17.145 [TestNG-test-RegressionModules-2] INFO  com.rishabh.framework.listeners.TestListener - Screenshot saved to /home/runner/work/Ecommerce-Automation-suite/Ecommerce-Automation-suite/target/screenshots/productDetail_increaseQuantity_reflectsInCart.png

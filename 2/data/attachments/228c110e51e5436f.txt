@@ -1,3 +1,0 @@
-05:12:49.688 [TestNG-test-RegressionModules-3] INFO  com.rishabh.framework.listeners.TestListener - >>> Starting: viewBrandProducts_polo_showsFilteredResults
-05:12:51.795 [TestNG-test-RegressionModules-3] ERROR com.rishabh.framework.listeners.TestListener - <<< FAILED: viewBrandProducts_polo_showsFilteredResults - java.lang.AssertionError: expected [true] but found [false]
-05:12:51.963 [TestNG-test-RegressionModules-3] INFO  com.rishabh.framework.listeners.TestListener - Screenshot saved to /home/runner/work/Ecommerce-Automation-suite/Ecommerce-Automation-suite/target/screenshots/viewBrandProducts_polo_showsFilteredResults.png

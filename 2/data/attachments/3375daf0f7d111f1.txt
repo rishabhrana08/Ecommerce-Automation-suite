@@ -1,3 +1,0 @@
-05:17:52.782 [TestNG-test-RegressionModules-4] INFO  com.rishabh.framework.listeners.TestListener - >>> Starting: cart_removeProduct_removedSuccessfully
-05:17:55.830 [TestNG-test-RegressionModules-4] ERROR com.rishabh.framework.listeners.TestListener - <<< FAILED: cart_removeProduct_removedSuccessfully - java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
-05:17:56.264 [TestNG-test-RegressionModules-4] INFO  com.rishabh.framework.listeners.TestListener - Screenshot saved to /home/runner/work/Ecommerce-Automation-suite/Ecommerce-Automation-suite/target/screenshots/cart_removeProduct_removedSuccessfully.png
