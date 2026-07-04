@@ -41,10 +41,12 @@ jobs:
 
       - name: Upload Allure results (${{ matrix.browser }})
         uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: allure-results-${{ matrix.browser }}
           path: target/allure-results
           retention-days: 15
+          if-no-files-found: warn
 
   publish-report:
     name: Build & publish Allure report
@@ -57,12 +59,17 @@ jobs:
 
       - name: Download all Allure result artifacts
         uses: actions/download-artifact@v4
+        continue-on-error: true
         with:
           path: downloaded-results
 
       - name: Merge results from all browsers into one folder
         run: |
           mkdir -p allure-results
+          if [ ! -d downloaded-results ]; then
+            echo "::error::No Allure result artifacts were uploaded by any browser job - the test step likely failed before any tests ran (check the 'Run regression suite' step logs). Skipping report generation."
+            exit 1
+          fi
           find downloaded-results -mindepth 2 -maxdepth 2 -type f -exec cp {} allure-results \;
 
       - name: Generate Allure report
