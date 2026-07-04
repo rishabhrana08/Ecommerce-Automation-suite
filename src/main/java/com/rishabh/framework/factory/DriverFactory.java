@@ -43,21 +43,27 @@ public class DriverFactory {
             case EDGE -> {
                 WebDriverManager.edgedriver().setup();
                 EdgeOptions options = new EdgeOptions();
+                // CI runners execute as an unprivileged user inside a container - Edge
+                // (chromium-based) is fussier about this than Chrome and can fail to
+                // launch at all without these
+                options.addArguments("--no-sandbox", "--disable-dev-shm-usage", "--remote-allow-origins=*");
                 if (config.isHeadless()) {
-                    options.addArguments("--headless=new");
+                    options.addArguments("--headless=new", "--disable-gpu");
                 }
                 driver = new EdgeDriver(options);
             }
             case CHROME_HEADLESS -> {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
-                options.addArguments("--headless=new", "--disable-gpu", "--window-size=1920,1080");
+                options.addArguments("--headless=new", "--disable-gpu", "--window-size=1920,1080",
+                        "--no-sandbox", "--disable-dev-shm-usage");
                 driver = new ChromeDriver(options);
             }
             default -> {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
-                options.addArguments("--disable-notifications", "--remote-allow-origins=*");
+                options.addArguments("--disable-notifications", "--remote-allow-origins=*",
+                        "--no-sandbox", "--disable-dev-shm-usage");
                 if (config.isHeadless()) {
                     options.addArguments("--headless=new");
                 }
